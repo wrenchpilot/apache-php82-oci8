@@ -40,7 +40,6 @@ jobs:
       # Push the Docker image to GHCR
       - name: Push Docker image to GHCR
         run: |
-          TIMESTAMP=$(date +%s)
           docker tag apache-php82-oci8:latest ghcr.io/wrenchpilot/apache-php82-oci8:latest
           docker push ghcr.io/wrenchpilot/apache-php82-oci8:latest
 

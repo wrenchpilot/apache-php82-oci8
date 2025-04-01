@@ -25,16 +25,19 @@ This project provides a Dockerized environment for running PHP 8.2 with Apache a
    cd apache-php82-oci8
    ```
 
-2. Start the Docker container:
+2. Build the image:
 
    ```bash
    docker build -t apache-php82-oci8 .
+   ```
+
+3. Start the container:
+
+   ```bash
    docker compose up -d
    ```
 
-3. Place your PHP application files in the `/opt/html` directory on your host machine. These will be mapped to `/var/www/html` in the container.
-
-4. Access the application in your browser at `http://localhost`.
+4. For production use, place your PHP application files in the `/opt/html` directory on your host machine. These will be mapped to `/var/www/html` in the container.
 
 ## Configuration
 
@@ -51,7 +54,6 @@ docker compose down
 
 ## Troubleshooting
 
-- Ensure the Oracle Instant Client RPMs are accessible and the URLs in the Dockerfile are valid.
 - Check the container logs for errors:
 
   ```bash
