@@ -28,5 +28,4 @@ function connect($host, $sid, $u, $p)
     }
 }
 
-connect($HOST, $SID, $USERNAME, $PASSWORD
-); // Call the function to establish a connection
+connect($HOST, $SID, $USERNAME, $PASSWORD);
