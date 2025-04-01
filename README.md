@@ -59,3 +59,13 @@ docker compose down
   ```bash
   docker logs apache-php82-oci8
   ```
+
+## Versions
+
+- PHP Info Screenshot:
+
+  ![PHP Info](screenshots/01-php.png)
+
+- OCI8 Extension Screenshot:
+
+  ![OCI8 Extension](screenshots/02-oci.png)
