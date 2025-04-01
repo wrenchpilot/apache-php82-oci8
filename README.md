@@ -7,8 +7,8 @@ This project provides a Dockerized environment for running PHP 8.2 with Apache a
 ## Features
 
 - PHP 8.2 with Apache
-- Oracle Instant Client (Basic, SQLPlus, and SDK)
-- OCI8 extension installed via PECL
+- Oracle Instant Client 19.20.0.0.0 (Basic, SQLPlus, and SDK)
+- OCI8 extension installed via PECL (3.4.0)
 - Configurable Oracle environment variables
 - Apache mod_rewrite enabled
 
