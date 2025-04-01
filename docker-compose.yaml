@@ -1,6 +1,6 @@
 services:
   web:
-    image: apache-php82-oci8
+    image: ghcr.io/wrenchpilot/apache-php82-oci8:latest
     container_name: apache-php82-oci8
     ports:
       - "80:80"
