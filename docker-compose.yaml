@@ -1,7 +1,7 @@
 services:
   web:
-    image: gt-apache-php82-oci8
-    container_name: gt-apache-php82-oci8
+    image: apache-php82-oci8
+    container_name: apache-php82-oci8
     ports:
       - "80:80"
     volumes:
