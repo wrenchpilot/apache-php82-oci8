@@ -6,5 +6,6 @@ services:
       - "80:80"
     volumes:
       - ./index.php:/var/www/html/index.php # Test
+      - ./oci.php:/var/www/html/oci.php # OCI Test
       #- /opt/html:/var/www/html # Prod
     restart: always

@@ -52,6 +52,11 @@ To stop the container, run:
 docker compose down
 ```
 
+## Testing OCI
+
+- Edit `oci.php` to include your Oracle database credentials by setting the `$HOST`, `$SID`, `$USERNAME`, and `$PASSWORD` variables at the top of the file.
+- Access the script by navigating to [http://localhost/oci.php](http://localhost/oci.php) in your web browser.
+
 ## Troubleshooting
 
 - Check the container logs for errors:
