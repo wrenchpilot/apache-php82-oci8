@@ -1,0 +1,10 @@
+services:
+  web:
+    image: gt-apache-php82-oci8
+    container_name: gt-apache-php82-oci8
+    ports:
+      - "80:80"
+    volumes:
+      - ./index.php:/var/www/html/index.php # Test
+      #- /opt/html:/var/www/html # Prod
+    restart: always
