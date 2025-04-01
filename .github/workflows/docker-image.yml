@@ -26,8 +26,7 @@ jobs:
       # Build the Docker image with two tags
       - name: Build Docker image with tags
         run: |
-          TIMESTAMP=$(date +%s)
-          docker build -t apache-php82-oci8:latest -t apache-php82-oci8:$TIMESTAMP .
+          docker build -t apache-php82-oci8:latest .
 
       # Optionally, test the Docker image
       - name: Test Docker image
@@ -43,6 +42,5 @@ jobs:
         run: |
           TIMESTAMP=$(date +%s)
           docker tag apache-php82-oci8:latest ghcr.io/wrenchpilot/apache-php82-oci8:latest
-          docker tag apache-php82-oci8:$TIMESTAMP ghcr.io/wrenchpilot/apache-php82-oci8:$TIMESTAMP
           docker push ghcr.io/wrenchpilot/apache-php82-oci8:latest
-          docker push ghcr.io/wrenchpilot/apache-php82-oci8:$TIMESTAMP
+
