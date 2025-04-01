@@ -25,9 +25,9 @@ jobs:
       - name: Build Docker image with tags
         run: |
           TIMESTAMP=$(date +%s)
-          docker build -t gt-apache-php82-oci8:latest -t gt-apache-php82-oci8:$TIMESTAMP .
+          docker build -t apache-php82-oci8:latest -t apache-php82-oci8:$TIMESTAMP .
 
       # Optionally, test the Docker image
       - name: Test Docker image
         run: |
-          docker run --rm gt-apache-php82-oci8:latest php -v
+          docker run --rm apache-php82-oci8:latest php -v
