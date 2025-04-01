@@ -2,6 +2,8 @@
 
 This project provides a Dockerized environment for running PHP 8.2 with Apache and the Oracle OCI8 extension.
 
+[![Build Docker Image](https://github.com/wrenchpilot/apache-php82-oci8/actions/workflows/docker-image.yml/badge.svg)](https://github.com/wrenchpilot/apache-php82-oci8/actions/workflows/docker-image.yml)
+
 ## Features
 
 - PHP 8.2 with Apache
