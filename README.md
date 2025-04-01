@@ -1,4 +1,4 @@
-# GT Apache PHP 8.2 with OCI8
+# Apache PHP 8.2 with OCI8
 
 This project provides a Dockerized environment for running PHP 8.2 with Apache and the Oracle OCI8 extension.
 
@@ -20,14 +20,13 @@ This project provides a Dockerized environment for running PHP 8.2 with Apache a
 1. Clone this repository:
 
    ```bash
-   git clone git@it.github.gatech.edu:GTSIS/gt-apache-php82-oci8.git
-   cd gt-apache-php82-oci8
+   cd apache-php82-oci8
    ```
 
 2. Start the Docker container:
 
    ```bash
-   docker build -t gt-apache-php82-oci8 .
+   docker build -t apache-php82-oci8 .
    docker compose up -d
    ```
 
@@ -54,5 +53,5 @@ docker compose down
 - Check the container logs for errors:
 
   ```bash
-  docker logs gt-apache-php82-oci8
+  docker logs apache-php82-oci8
   ```
