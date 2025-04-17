@@ -26,7 +26,7 @@ jobs:
       # Build the Docker image with two tags
       - name: Build Docker image with tags
         run: |
-          docker build -t apache-php82-oci8:latest .
+          DOCKER_BUILDKIT=1 docker build --platform linux/amd64 -t apache-php82-oci8:latest .
 
       # Optionally, test the Docker image
       - name: Test Docker image
