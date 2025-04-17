@@ -1,5 +1,5 @@
 # Use an official PHP 8.2 image with Apache for x86_64
-FROM --platform=linux/amd64 php:8.2-apache-slim
+FROM --platform=linux/amd64 php:8.2-apache
 
 # Update and install required dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
