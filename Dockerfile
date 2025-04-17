@@ -1,5 +1,7 @@
 FROM php:8.2-apache
 
+LABEL org.opencontainers.image.description="PHP 8.2 with Apache and Oracle Instant Client (19.20.0.0.0) for OCI8 support"
+
 # Update and install required dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     libaio1 \
