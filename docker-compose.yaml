@@ -2,6 +2,11 @@ services:
   web:
     image: ghcr.io/wrenchpilot/apache-php82-oci8:latest
     container_name: apache-php82-oci8
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
     ports:
       - "80:80"
     volumes:

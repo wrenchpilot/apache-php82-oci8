@@ -7,7 +7,7 @@ This project provides a Dockerized environment for running PHP 8.2 with Apache a
 ## Features
 
 - PHP 8.2 with Apache
-- Oracle Instant Client 19.20.0.0.0 (Basic, SQLPlus, and SDK)
+- Oracle Instant Client 19.3.0.0.0 (Basic, SQLPlus, and SDK)
 - OCI8 extension installed via PECL (3.4.0)
 - Configurable Oracle environment variables
 - Apache mod_rewrite enabled
@@ -22,27 +22,36 @@ This project provides a Dockerized environment for running PHP 8.2 with Apache a
 1. Clone this repository:
 
    ```bash
+   git clone https://github.com/your-user/apache-php82-oci8.git
    cd apache-php82-oci8
    ```
 
-2. Build the image:
+2. Build the image (default Oracle client version 19.3):
 
    ```bash
    docker build -t apache-php82-oci8 .
    ```
 
-3. Start the container:
+3. (Optional) Build with a custom Oracle client version:
+
+   ```bash
+   docker build \
+     --build-arg ORACLE_CLIENT_VERSION=19.20.0.0.0 \
+     -t apache-php82-oci8:19.20 .
+   ```
+
+4. Start the container:
 
    ```bash
    docker compose up -d
    ```
 
-4. For production use, place your PHP application files in the `/opt/html` directory on your host machine. These will be mapped to `/var/www/html` in the container.
+5. For production use, place your PHP application files in the `/opt/html` directory on your host machine. These will be mapped to `/var/www/html` in the container.
 
 ## Configuration
 
 - The `docker-compose.yaml` file maps the host directory `/opt/html` to the container's `/var/www/html`. Update this path if needed.
-- Oracle environment variables are set in the Dockerfile. Modify them if required.
+- Oracle environment variables are set in the Dockerfile. Modify them if required, and use the `ORACLE_CLIENT_VERSION` build argument to choose a different version.
 
 ## Stopping the Container
 
